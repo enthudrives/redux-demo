@@ -1,4 +1,6 @@
 import React from 'react'
+import { connect } from 'react-redux'
+import { increment, doubleAsync } from '../modules/counter'
 
 export const Counter = (props) => (
   <div style={{ margin: '0 auto' }} >
@@ -13,10 +15,20 @@ export const Counter = (props) => (
   </div>
 )
 
+const mapDispatchToProps = {
+  increment : () => increment(1),
+  doubleAsync
+}
+
+const mapStateToProps = (state) => ({
+  counter : state.counterValue
+})
+
+
 Counter.propTypes = {
   counter     : React.PropTypes.number.isRequired,
   doubleAsync : React.PropTypes.func.isRequired,
   increment   : React.PropTypes.func.isRequired
 }
 
-export default Counter
+export default connect(mapStateToProps, mapDispatchToProps)(Counter)

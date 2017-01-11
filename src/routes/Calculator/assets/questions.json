@@ -1,0 +1,32 @@
+{
+    "address": "67 John Downs Drive, Browns Bay, Auckland 0630",
+    "currentSection": 0,
+    "sections": [{
+        "id": 1,
+        "name": "Property Details",
+        "questions": [
+            {
+                "id": 1,
+                "name": "Style of construction",
+                "type": "select",
+                "options": ["Contemporary", "Mid Century", "Bungalow"]
+            },
+            {"id": 2, "name": "Year of construction", "type": "text"},
+            {
+                "id": 3,
+                "name": "Standard of construction",
+                "type": "select",
+                "options": ["Standard", "Quality", "Prestige"]
+            },
+            {"id": 4, "name": "Number of levels ", "type": "text"}
+        ]
+    },
+        {
+            "id": 2,
+            "name": "Property Details",
+            "questions": [
+                {"id": 5, "name": "Walls", "type": "select", "options": ["Blockwork", "Double brick"]},
+                {"id": 6, "name": "Roof", "type": "select", "options": ["Flat", "Pitched", "Other"]}
+            ]
+        }]
+}
